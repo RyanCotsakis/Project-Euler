@@ -8,11 +8,11 @@ def largestPalindrome():
 	largest = 0
 	for x in range(999,99,-1):
 		for y in range(999,x-1,-1):
+			prod = "%i" %(x*y)
+			if prod == prod[::-1] and x*y > largest:
+				largest = x*y
 			if y == 999 and x*y < largest:
 				return largest
-			prod = "%i" %(x*y)
-			if prod == prod[::-1]:
-				largest = x*y
 
 print(largestPalindrome())
 
