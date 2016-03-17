@@ -4,9 +4,9 @@
 What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
 """
 
-def smallestMultiple():
+def smallestMultiple(n):
 	factors = []
-	for x in range(2,21):
+	for x in range(2,n+1):
 		factor = x
 		for y in factors:
 			if factor%y == 0:
@@ -17,4 +17,4 @@ def smallestMultiple():
 		smallestMultiple*=factor
 	return smallestMultiple
 
-print(smallestMultiple())
+print(smallestMultiple(20))
